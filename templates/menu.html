@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Menu</title>
+</head>
+<body>
+    <div class="ig-tables">
+    <center>
+        <h1>Instagram Follower Analysis</h1>
+        <h3>Organized dashboard of who you follow, who follows you, and who doesn't follow back.</h3>
+
+        <div>
+            <table style="float:left;">
+                <tr>
+                    <th>Followed</th>
+                </tr>
+                {%for user in followed%}
+                <tr><td>{{user}}</td></tr>
+                {%endfor%}
+            </table>
+        </div>
+
+        <div>
+            <table style="float:left;">
+                <tr>
+                    <th>Followers</th>
+                </tr>
+                {%for user in followers%}
+                <tr><td>{{user}}</td></tr>
+                {%endfor%}
+            </table>
+        </div>
+
+        <div>
+            <table style="float:left;">
+                <tr>
+                    <th>Dont Follow Back</th>
+                </tr>
+                {%for user in xtra%}
+                <tr><td>{{user}}</td></tr>
+                {%endfor%}
+            </table>
+        </div>
+     
+    </center>
+    </div>
+</body>
+</html>
